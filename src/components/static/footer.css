@@ -1,0 +1,24 @@
+.footer {
+    padding: 20px;
+    background-color: #f8f9fa; /* Adjust as needed */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+  }
+  
+  .icon-size {
+    font-size: 24px; /* Adjust icon size */
+    color: #333; /* Adjust icon color */
+  }
+  
