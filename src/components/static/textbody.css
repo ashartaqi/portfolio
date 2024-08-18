@@ -1,19 +1,33 @@
 .upper-text-body{
     padding-top: 130px;
 }
-
 .hey-there{
     font-size: 34px;
     font-weight: bolder;
 }
-
 .introduction-text{
     font-size: 22px;
     padding-top: 10px;
     font-weight: 300;
 }
-.planet-image{}
-.arrow-image{}
+.image-container{
+    height: auto;
+}
+.planet-image{
+    transform: translateY(-100px);
+}
+.arrow-image{
+    transform: translateY(-100px);
+}
 .lower-text-body{
     padding-top: 100px;
 }
+.clicked {
+    border: 2px solid transparent;
+    padding: 5px;
+  }
+.clicked:hover,
+.clicked:active {
+    border: 2px solid #00f;
+  }
+  

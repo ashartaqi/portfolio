@@ -2,7 +2,7 @@
 .right-navbar {
   position: fixed;
   top: 0;
-  right: 0; /* Change this from left: 0 to right: 0 */
+  right: 0;
   height: 100%;
   background-color: #333;
   padding: 30px;
@@ -20,12 +20,16 @@
   margin: 20px 0;
 }
 
-.right-navbar ul li a {
+.right-navbar ul li button {
   color: white;
-  text-decoration: none;
+  background: none;
+  border: none;
   font-size: 30px;
+  cursor: pointer;
+  padding: 0;
 }
 
-.right-navbar ul li a:hover {
+.right-navbar ul li button:hover {
   color: #ddd;
 }
+

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import './static/mainpage.css';
 import Navbar from './Navbar';
 import UpperTextBody from './UpperTextBody';
@@ -7,17 +7,24 @@ import Table from './Table';
 import LowerBodyText from './LowerBodyText';
 // import Draggable from './Draggable';
 
+export const MainPageContext = createContext()
+
 const MainPage = () => {
+
+  const [enableDraggable, useEnableDraggable] = useState(true)
+
   return (
-    <div className=''>
-      <Navbar />
-      <div className='container'>
-        <UpperTextBody />
-        <Table />
-        <LowerBodyText />
+    <MainPageContext.Provider value={{enableDraggable, useEnableDraggable}}>
+      <div className=''>
+        <Navbar />
+        <div className='container'>
+          <UpperTextBody />
+          <Table />
+          <LowerBodyText />        
+        </div>
+        {/* <Footer /> */}
       </div>
-      {/* <Footer /> */}
-    </div>
+    </MainPageContext.Provider>
   )
 }
 
