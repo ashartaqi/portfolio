@@ -1,7 +1,3 @@
 body {
-    background-image:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('./components/static/images/polka.png');
-    background-size: cover; /* Adjusts the size of the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-position: center; /* Centers the image */
-    color: white;
+    overflow-x: hidden;
 }

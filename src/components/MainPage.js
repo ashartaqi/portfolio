@@ -2,27 +2,31 @@ import React, { createContext, useState } from 'react'
 import './static/mainpage.css';
 import Navbar from './Navbar';
 import UpperTextBody from './UpperTextBody';
-// import Footer from './Footer';
 import Table from './Table';
+import Footer from './Footer';
 import LowerBodyText from './LowerBodyText';
-// import Draggable from './Draggable';
 
 export const MainPageContext = createContext()
 
 const MainPage = () => {
 
+  const initialPositions = [{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 }, { x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 }];
+
   const [enableDraggable, useEnableDraggable] = useState(true)
+  const [positions, setPositions] = useState(initialPositions);
+  const [enableLightMode, useEnableLIghtMode] = useState(true)
 
   return (
-    <MainPageContext.Provider value={{enableDraggable, useEnableDraggable}}>
-      <div className=''>
+    <MainPageContext.Provider value={{enableDraggable, useEnableDraggable, positions, setPositions, initialPositions, enableLightMode, useEnableLIghtMode}}>
+      <div className={`${enableLightMode ? 'base-container-dark-mode' : ''}`}>
         <Navbar />
         <div className='container'>
           <UpperTextBody />
           <Table />
-          <LowerBodyText />        
+          <LowerBodyText />
+          <Footer />
         </div>
-        {/* <Footer /> */}
+        
       </div>
     </MainPageContext.Provider>
   )

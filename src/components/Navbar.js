@@ -7,9 +7,19 @@ import { MainPageContext } from './MainPage';
 
 const RightNavbar = () => {
 
-  const { enableDraggable, useEnableDraggable } = useContext(MainPageContext);
+  const { enableDraggable, useEnableDraggable, positions, setPositions, initialPositions, enableLightMode, useEnableLIghtMode } = useContext(MainPageContext);
+
   const HandleEnableDragging = () => {
     useEnableDraggable(!enableDraggable);
+  };
+
+  const HandleEnableLightMode = () => {
+    useEnableLIghtMode(!enableLightMode);
+  }
+  
+  const resetPositions = () => {
+    setPositions([...initialPositions]);
+    console.log(positions)
   };
 
   return (
@@ -17,8 +27,8 @@ const RightNavbar = () => {
       <ul className='right-navbar-ul'>
         <li><button onClick={HandleEnableDragging}><BsCursor /></button></li>
         <li><button><FaPen /></button></li>
-        <li><button><AiOutlineReload /></button></li>
-        <li><button><BsSun /></button></li>
+        <li><button onClick={resetPositions}><AiOutlineReload /></button></li>
+        <li><button onClick={HandleEnableLightMode}><BsSun /></button></li>
       </ul>
     </nav>
   );

@@ -1,3 +1,15 @@
+.base-container-dark-mode{
+    background-image:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../static/images/polka.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+}
+
+.base-container-light-mode{
+    color: black;
+}
+
 .main-container{
     padding: auto;
 }
