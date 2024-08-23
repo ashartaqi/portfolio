@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { BsCursor, BsSun } from 'react-icons/bs'; // Bootstrap icons
-import { FaPen } from 'react-icons/fa'; // Font Awesome icon
-import { AiOutlineReload } from 'react-icons/ai'; // Ant Design icon
+import { BsCursor, BsSun } from 'react-icons/bs';
+import { FaPen, FaLock } from 'react-icons/fa';
+import { AiOutlineReload } from 'react-icons/ai';
 import '../components/static/navbar.css';
 import { MainPageContext } from './MainPage';
 
@@ -11,6 +11,10 @@ const RightNavbar = () => {
 
   const HandleEnableDragging = () => {
     useEnableDraggable(!enableDraggable);
+  };
+
+  const HandleCursor = () => {
+    useEnableDraggable(false);
   };
 
   const HandleEnableLightMode = () => {
@@ -25,10 +29,11 @@ const RightNavbar = () => {
   return (
     <nav className="right-navbar">
       <ul className='right-navbar-ul'>
-        <li><button onClick={HandleEnableDragging}><BsCursor /></button></li>
+        <li><button onClick={HandleCursor}><BsCursor /></button></li>
         <li><button><FaPen /></button></li>
         <li><button onClick={resetPositions}><AiOutlineReload /></button></li>
         <li><button onClick={HandleEnableLightMode}><BsSun /></button></li>
+        <li><button onClick={HandleEnableDragging}><FaLock /></button></li>
       </ul>
     </nav>
   );

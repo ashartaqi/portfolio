@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import '../components/static/textbody.css';
-import planet from '../components/static/images/13972.png';
+import planet from '../components/static/images/planet.png';
+import dog from '../components/static/images/dog.png';
 import arrow from '../components/static/images/arrow.png';
 import { MainPageContext } from './MainPage';
 import DraggableElement from './Draggable';
@@ -55,6 +56,16 @@ const UpperTextBody = () => {
             position={positions[4]}
             onPositionChange={(newPosition) => handlePositionChange(4, newPosition)}
           />
+          <DraggableElement
+            src={arrow}
+            alt=""
+            enableDraggable={enableDraggable}
+            className="col-8" 
+            key={5}
+            content=""
+            position={positions[15]}
+            onPositionChange={(newPosition) => handlePositionChange(15, newPosition)}
+          />
         </div>
         <div className="col-4 image-container">
           <div className="row">
@@ -62,19 +73,19 @@ const UpperTextBody = () => {
               src={planet}
               alt=""
               enableDraggable={enableDraggable}
-              className="planet-image"
+              className=""
               key={5}
-              content={`Element ${5}`}
+              content=""
               position={positions[5]}
               onPositionChange={(newPosition) => handlePositionChange(5, newPosition)}
             />
             <DraggableElement
-              src={arrow}
+              src={dog}
               alt=""
               enableDraggable={enableDraggable}
-              className="arrow-image"
+              className=""
               key={6}
-              content={`Element ${6}`}
+              content=""
               position={positions[6]}
               onPositionChange={(newPosition) => handlePositionChange(6, newPosition)}
             />

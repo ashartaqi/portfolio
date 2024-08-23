@@ -12,7 +12,7 @@ const MainPage = () => {
 
   const initialPositions = [{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 }, { x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 }];
 
-  const [enableDraggable, useEnableDraggable] = useState(true)
+  const [enableDraggable, useEnableDraggable] = useState(false)
   const [positions, setPositions] = useState(initialPositions);
   const [enableLightMode, useEnableLIghtMode] = useState(true)
 

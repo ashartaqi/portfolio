@@ -13,12 +13,6 @@
 .image-container{
     height: auto;
 }
-.planet-image{
-    transform: translateY(-100px);
-}
-.arrow-image{
-    transform: translateY(-100px);
-}
 .lower-text-body{
     padding-top: 100px;
 }
