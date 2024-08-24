@@ -1,23 +1,28 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from 'react';
 import './static/mainpage.css';
 import Navbar from './Navbar';
 import UpperTextBody from './UpperTextBody';
 import Table from './Table';
 import Footer from './Footer';
 import LowerBodyText from './LowerBodyText';
+import Pen from './Pen';
 
-export const MainPageContext = createContext()
+export const MainPageContext = createContext();
 
 const MainPage = () => {
+  const initialPositions = new Array(16).fill({ x: 0, y: 0 });
 
-  const initialPositions = [{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 }, { x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 } ,{ x: 0, y: 0 }];
-
-  const [enableDraggable, useEnableDraggable] = useState(false)
+  const [enableDraggable, setEnableDraggable] = useState(false);
   const [positions, setPositions] = useState(initialPositions);
-  const [enableLightMode, useEnableLIghtMode] = useState(true)
+  const [enableLightMode, setEnableLightMode] = useState(true);
+  const [drawingMode, setDrawingMode] = useState(false);
+
+  const handleDrawingMode = () => {
+    setDrawingMode(prevMode => !prevMode);
+  };
 
   return (
-    <MainPageContext.Provider value={{enableDraggable, useEnableDraggable, positions, setPositions, initialPositions, enableLightMode, useEnableLIghtMode}}>
+    <MainPageContext.Provider value={{ enableDraggable, setEnableDraggable, positions, setPositions, initialPositions, enableLightMode, setEnableLightMode, drawingMode, handleDrawingMode }}>
       <div className={`${enableLightMode ? 'base-container-dark-mode' : ''}`}>
         <Navbar />
         <div className='container'>
@@ -26,10 +31,11 @@ const MainPage = () => {
           <LowerBodyText />
           <Footer />
         </div>
-        
+        {drawingMode && <Pen />}
       </div>
     </MainPageContext.Provider>
-  )
-}
+  );
+};
 
-export default MainPage
+export default MainPage;
+

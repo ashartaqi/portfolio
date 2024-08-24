@@ -6,39 +6,35 @@ import '../components/static/navbar.css';
 import { MainPageContext } from './MainPage';
 
 const RightNavbar = () => {
+  const { enableDraggable, setEnableDraggable, positions, setPositions, initialPositions, enableLightMode, setEnableLightMode, drawingMode, handleDrawingMode } = useContext(MainPageContext);
 
-  const { enableDraggable, useEnableDraggable, positions, setPositions, initialPositions, enableLightMode, useEnableLIghtMode } = useContext(MainPageContext);
-
-  const HandleEnableDragging = () => {
-    useEnableDraggable(!enableDraggable);
+  const handleEnableDragging = () => {
+    setEnableDraggable(!enableDraggable);
   };
 
-  const HandleCursor = () => {
-    useEnableDraggable(false);
+  const handleCursor = () => {
+    setEnableDraggable(false);
   };
 
-  const HandleEnableLightMode = () => {
-    useEnableLIghtMode(!enableLightMode);
-  }
-  
+  const handleEnableLightMode = () => {
+    setEnableLightMode(!enableLightMode);
+  };
+
   const resetPositions = () => {
     setPositions([...initialPositions]);
-    console.log(positions)
   };
 
   return (
     <nav className="right-navbar">
       <ul className='right-navbar-ul'>
-        <li><button onClick={HandleCursor}><BsCursor /></button></li>
-        <li><button><FaPen /></button></li>
+        <li><button onClick={handleCursor}><BsCursor /></button></li>
+        <li><button onClick={handleDrawingMode}><FaPen /></button></li>
         <li><button onClick={resetPositions}><AiOutlineReload /></button></li>
-        <li><button onClick={HandleEnableLightMode}><BsSun /></button></li>
-        <li><button onClick={HandleEnableDragging}><FaLock /></button></li>
+        <li><button onClick={handleEnableLightMode}><BsSun /></button></li>
+        <li><button onClick={handleEnableDragging}><FaLock /></button></li>
       </ul>
     </nav>
   );
 };
 
 export default RightNavbar;
-
-
