@@ -14,13 +14,16 @@ const MainPage = () => {
 
   const [enableDraggable, useEnableDraggable] = useState(false)
   const [positions, setPositions] = useState(initialPositions);
-  const [enableLightMode, useEnableLIghtMode] = useState(true)
+  const [enableLightMode, setEnableLightMode] = useState(true);
+  const [enableLock, setEnableLock] = useState(false);
+  const [drawingMode, setDrawingMode] = useState(false);
+
 
   return (
-    <MainPageContext.Provider value={{enableDraggable, useEnableDraggable, positions, setPositions, initialPositions, enableLightMode, useEnableLIghtMode}}>
+    <MainPageContext.Provider value={{ enableDraggable, setEnableDraggable, positions, setPositions, initialPositions, enableLightMode, setEnableLightMode, drawingMode, setDrawingMode, enableLock, setEnableLock }} style={{ position: 'relative', width: '100vw', height: '100vh' }}>
       <div className={`${enableLightMode ? 'base-container-dark-mode' : ''}`}>
         <Navbar />
-        <div className='container'>
+        <div className='container main-body-container'>
           <UpperTextBody />
           <Table />
           <LowerBodyText />

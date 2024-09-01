@@ -4,18 +4,17 @@
   top: 0;
   right: 0;
   height: 100%;
-  background-color: #333;
   padding: 30px;
   padding-top: 150px;
 }
 
 .right-navbar-ul {
   list-style-type: none;
-  padding: 0;
-  border-color: #542323;
-  border-radius: 20px;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 40px;
+  
 }
-
 .right-navbar ul li {
   margin: 20px 0;
 }
@@ -26,10 +25,19 @@
   border: none;
   font-size: 30px;
   cursor: pointer;
-  padding: 0;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-navbar ul li button.active {
+  background-color: #444; 
 }
 
 .right-navbar ul li button:hover {
   color: #ddd;
 }
+
 

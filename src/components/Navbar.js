@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { BsCursor, BsSun } from 'react-icons/bs';
 import { FaPen, FaLock } from 'react-icons/fa';
 import { AiOutlineReload } from 'react-icons/ai';
@@ -6,34 +6,91 @@ import '../components/static/navbar.css';
 import { MainPageContext } from './MainPage';
 
 const RightNavbar = () => {
+  const { 
+    enableDraggable, 
+    setEnableDraggable, 
+    setPositions, 
+    initialPositions, 
+    enableLightMode, 
+    setEnableLightMode, 
+    drawingMode, 
+    setDrawingMode, 
+    enableLock, 
+    setEnableLock
+  } = useContext(MainPageContext);
 
-  const { enableDraggable, useEnableDraggable, positions, setPositions, initialPositions, enableLightMode, useEnableLIghtMode } = useContext(MainPageContext);
+  const [activeButton, setActiveButton] = useState('cursor');
 
-  const HandleEnableDragging = () => {
-    useEnableDraggable(!enableDraggable);
+  const handleLock = () => {
+    setEnableLock(!enableLock)
+    setEnableDraggable(!enableDraggable);
+    setActiveButton('dragging');
   };
 
-  const HandleCursor = () => {
-    useEnableDraggable(false);
+  const handleCursor = () => {
+    setEnableDraggable(false);
+    setActiveButton('cursor');
   };
 
-  const HandleEnableLightMode = () => {
-    useEnableLIghtMode(!enableLightMode);
-  }
-  
+  const handleEnableLightMode = () => {
+    setEnableLightMode(!enableLightMode);
+    setActiveButton('lightMode');
+  };
+
   const resetPositions = () => {
     setPositions([...initialPositions]);
-    console.log(positions)
+    setDrawingMode(false)
+    setActiveButton('reset');
+  };
+
+  const handleDrawingModeClick = () => {
+    setDrawingMode(!drawingMode)
+    setActiveButton('drawing');
   };
 
   return (
     <nav className="right-navbar">
       <ul className='right-navbar-ul'>
-        <li><button onClick={HandleCursor}><BsCursor /></button></li>
-        <li><button><FaPen /></button></li>
-        <li><button onClick={resetPositions}><AiOutlineReload /></button></li>
-        <li><button onClick={HandleEnableLightMode}><BsSun /></button></li>
-        <li><button onClick={HandleEnableDragging}><FaLock /></button></li>
+        <li>
+          <button 
+            onClick={handleCursor} 
+            className={activeButton === 'cursor' ? 'active' : ''}
+          >
+            <BsCursor />
+          </button>
+        </li>
+        <li>
+          <button 
+            onClick={handleDrawingModeClick} 
+            className={activeButton === 'drawing' ? 'active' : ''}
+          >
+            <FaPen />
+          </button>
+        </li>
+        <li>
+          <button 
+            onClick={resetPositions} 
+            className={activeButton === 'reset' ? 'active' : ''}
+          >
+            <AiOutlineReload />
+          </button>
+        </li>
+        <li>
+          <button 
+            onClick={handleEnableLightMode} 
+            className={activeButton === 'lightMode' ? 'active' : ''}
+          >
+            <BsSun />
+          </button>
+        </li>
+        <li>
+          <button 
+            onClick={handleLock} 
+            className={activeButton === 'dragging' ? 'active' : ''}
+          >
+            <FaLock />
+          </button>
+        </li>
       </ul>
     </nav>
   );
