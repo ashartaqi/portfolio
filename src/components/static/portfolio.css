@@ -1,11 +1,15 @@
 .portfolio {
     padding: 130px 0 95px 0;
-    background: #2d2e2e;
+    background-image:linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../static/images/polka.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
 }
 
 .portfolio h2 {
-    font-size: 30px;
-    font-weight: 800;
+    font-size: 35px;
+    font-weight: 600;
     color: white;
     margin-bottom: 60px;
 }
