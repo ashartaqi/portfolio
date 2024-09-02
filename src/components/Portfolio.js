@@ -37,7 +37,7 @@ const Portfolio = () => {
                             <div className="overlay text-center">
                                 <div className="content">
                                     <h3>Furni</h3>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/D8msW7pyMNIYCX5keulfg9/AI-Furniture-E-commerce-UI-Kit-(Community)?type=design&node-id=0%3A1&mode=design&t=TrMdU8Z9m4mySHWJ-1">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/D8msW7pyMNIYCX5keulfg9/AI-Furniture-E-commerce?node-id=0-1&t=mSZsXWJPgeiQgqmd-1">
                                         <span className="fa fa-eye"></span>
                                     </a>
                                 </div>
@@ -52,7 +52,7 @@ const Portfolio = () => {
                             <div className="overlay text-center">
                                 <div className="content">
                                     <h3>Explora</h3>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/file/MnfYCIsztMOPwnj5wnHIcv/Explora---Travel-Tickets-Booking-App?type=design&node-id=0%3A1&mode=design&t=JuhCuRyXZQZix1lG-1">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/MnfYCIsztMOPwnj5wnHIcv/Explora---Travel-Tickets-Booking-App?node-id=0-1&t=lEWgvbjDlbIU5F69-1">
                                         <span className="fa fa-eye"></span>
                                     </a>
                                 </div>
@@ -67,7 +67,7 @@ const Portfolio = () => {
                             <div className="overlay text-center">
                                 <div className="content">
                                     <h3>Car Cleaning Services</h3>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/ykjAwBbFhJBGOdB6smNeQz/Car-Service?node-id=337-876&t=dzxmULbxQDe717Mg-1">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/ykjAwBbFhJBGOdB6smNeQz/Car-Service?node-id=0-302&t=BFuoYGThCyjgi21c-1">
                                         <span className="fa fa-eye"></span>
                                     </a>
                                 </div>
@@ -82,7 +82,7 @@ const Portfolio = () => {
                             <div className="overlay text-center">
                                 <div className="content">
                                     <h3>Plantation Mobile Application</h3>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/OJcpGFs17mY1oxkFN7kW5N/Plantation?node-id=14-1154&t=ZkgyZh5lLf0saeQC-1">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/OJcpGFs17mY1oxkFN7kW5N/Plantation?node-id=14-1154&t=ynY5Cb1vxkZ9jSVs-1">
                                         <span className="fa fa-eye"></span>
                                     </a>
                                 </div>
