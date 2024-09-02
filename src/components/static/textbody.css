@@ -2,11 +2,11 @@
     padding-top: 130px;
 }
 .hey-there{
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 500;
 }
 .introduction-text{
-    font-size: 22px;
+    font-size: 25px;
     padding-top: 10px;
     font-weight: 300;
 }
@@ -43,8 +43,8 @@ a:hover{
     transition: 300ms;
 }
 .lower-body-text{
-    font-size: 20px;
+    font-size: 24px;
 }
-.portfolio-redirect{
+/* .portfolio-redirect{
     
-}
+} */

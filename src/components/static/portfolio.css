@@ -1,0 +1,88 @@
+.portfolio {
+    padding: 130px 0 95px 0;
+    background: #2d2e2e;
+}
+
+.portfolio h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.portfolio .button-group {
+    margin-bottom: 30px;
+}
+
+.portfolio .button-group button {
+    border: 0;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+    color: #bac8d3;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 35px;
+    transition: all .2s ease-in-out;
+}
+
+.portfolio .button-group button:hover {
+    color: #ffffff;
+    background: #e0a80d;
+}
+
+.portfolio .button-group button.active {
+    color: #ffffff;
+    background: #e0a80d;
+}
+
+.portfolio .single-portfolio-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.portfolio .single-portfolio-item .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #e0a80d;
+    color: #ffffff;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}
+
+.portfolio .single-portfolio-item .overlay .content {
+    font-size: 20px;
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #ffffff;
+    transition: all .3s ease-in-out;
+    
+}
+
+.portfolio .single-portfolio-item .overlay .content h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.portfolio .single-portfolio-item .overlay .content p {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.portfolio .single-portfolio-item .overlay .content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.portfolio .single-portfolio-item:hover .overlay {
+    opacity: .95;
+}

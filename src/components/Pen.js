@@ -15,7 +15,7 @@ const Pen = () => {
     const handleResize = () => {
       const canvas = canvasRef.current;
       canvas.width = window.innerWidth * 0.85;
-      canvas.height = 1400;
+      canvas.height = 1250;
       if (ctx) {
         ctx.lineWidth = 5;
         ctx.strokeStyle = 'black';
@@ -75,7 +75,7 @@ const Pen = () => {
         left: 0,
         zIndex: 10,
         width: '85vw',
-        height: '1400px',
+        height: '1250px',
       }}
       onMouseDown={!enableLock ? startDrawing : null}
       onMouseMove={!enableLock ? draw : null}

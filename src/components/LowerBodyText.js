@@ -25,7 +25,7 @@ const LowerBodyText = () => {
         position={positions[13]}
         onPositionChange={(newPosition) => handlePositionChange(13, newPosition)}
       />
-      <p>To explore my work in detail, click on the <Link to='/portfolio' className='portfolio-redirect'>full portfolio link</Link> and feel free to connect using the links below</p>
+      <p className="lower-body-text">To explore my work in detail, click on the <Link to='/portfolio' className='portfolio-redirect'>full portfolio link</Link> and feel free to connect using the links below</p>
 
     </div>
   )
