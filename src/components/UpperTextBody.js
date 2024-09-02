@@ -40,7 +40,7 @@ const UpperTextBody = () => {
           />
           <DraggableElement
             elementType="p"
-            content="I currently work as a Product Designer at <a href='https://www.linkedin.com/company/wizardanalytics/' target='_blank' rel='noopener noreferrer' className='draggable-link-1'>Custom Gateway</a>, desiging catastrophe modeling data platform."
+            content="I currently work as a Product Designer at <a href='https://www.linkedin.com/company/wizardanalytics/' target='_blank' rel='noopener noreferrer' className='draggable-link-1'>Wizard Analytics</a>, desiging catastrophe modeling data platform."
             enableDraggable={enableDraggable}
             className="introduction-text"
             key={3}
