@@ -12,11 +12,9 @@ const Pen = () => {
     const ctx = canvas.getContext('2d');
     setContext(ctx);
 
-    canvas.width = window.innerWidth;
-    canvas.height = 1400;
-
     const handleResize = () => {
-      canvas.width = window.innerWidth;
+      const canvas = canvasRef.current;
+      canvas.width = window.innerWidth * 0.85;
       canvas.height = 1400;
       if (ctx) {
         ctx.lineWidth = 5;
@@ -24,6 +22,7 @@ const Pen = () => {
       }
     };
 
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => {
@@ -75,7 +74,7 @@ const Pen = () => {
         top: 0,
         left: 0,
         zIndex: 10,
-        width: '100%',
+        width: '85vw',
         height: '1400px',
       }}
       onMouseDown={!enableLock ? startDrawing : null}
@@ -87,6 +86,7 @@ const Pen = () => {
 };
 
 export default Pen;
+
 
 
 

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import '../components/static/textbody.css';
 import planet from '../components/static/images/planet.png';
-import dog from '../components/static/images/dog.png';
+import dolphin from '../components/static/images/dolphin.png';
 import arrow from '../components/static/images/arrow.png';
 import { MainPageContext } from './MainPage';
 import DraggableElement from './Draggable';
@@ -17,7 +17,7 @@ const UpperTextBody = () => {
   };
 
     return (
-    <div className="container-fluid upper-text-body col-10">
+    <div className="container-fluid upper-text-body col-11">
       <div className="row">
         <div className="col-8">
           <DraggableElement
@@ -31,7 +31,7 @@ const UpperTextBody = () => {
           />
           <DraggableElement
             elementType="p"
-            content="My name is Daniel Fosco, and I'm a software designer. I create systems for people to work, build, and collaborate online."
+            content="My name is Ariqa Amir, and I'm a software designer. I create design systems for people to work, build, and collaborate online."
             enableDraggable={enableDraggable}
             className="introduction-text"
             key={2}
@@ -40,7 +40,7 @@ const UpperTextBody = () => {
           />
           <DraggableElement
             elementType="p"
-            content="I currently work as a Staff Product Designer at GitHub, designing the world's largest developer platform. Before this, I worked at Miro, GitLab, Booking.com and more."
+            content="I currently work as a Product Designer at <a href='https://www.linkedin.com/company/wizardanalytics/' target='_blank' rel='noopener noreferrer' className='draggable-link-1'>Custom Gateway</a>, desiging catastrophe modeling data platform."
             enableDraggable={enableDraggable}
             className="introduction-text"
             key={3}
@@ -49,7 +49,7 @@ const UpperTextBody = () => {
           />
           <DraggableElement
             elementType="p"
-            content="Before this, I worked at Miro, GitLab, Booking.com and more."
+            content="Before this, I worked at <a href='https://www.linkedin.com/company/custom-gateway/' target='_blank' rel='noopener noreferrer' className='draggable-link-2'>Custom Gateway</a>, <a href='https://www.linkedin.com/company/custom-gateway/' target='_blank' rel='noopener noreferrer' className='draggable-link-3'>Ittehad</a> and more."
             enableDraggable={enableDraggable}
             className="introduction-text"
             key={4}
@@ -80,7 +80,7 @@ const UpperTextBody = () => {
               onPositionChange={(newPosition) => handlePositionChange(5, newPosition)}
             />
             <DraggableElement
-              src={dog}
+              src={dolphin}
               alt=""
               enableDraggable={enableDraggable}
               className=""

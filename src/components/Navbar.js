@@ -29,6 +29,7 @@ const RightNavbar = () => {
 
   const handleCursor = () => {
     setEnableDraggable(false);
+    setDrawingMode(false)
     setActiveButton('cursor');
   };
 
@@ -45,6 +46,7 @@ const RightNavbar = () => {
 
   const handleDrawingModeClick = () => {
     setDrawingMode(!drawingMode)
+    console.log(drawingMode)
     setActiveButton('drawing');
   };
 

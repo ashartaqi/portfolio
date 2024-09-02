@@ -34,7 +34,11 @@ const DraggableElement = React.forwardRef(
           <ElementType
             className={` ${className} ${!enableDraggable ? 'clicked' : ''}`}
           >
-            {content}
+            {typeof content === 'string' && content.includes('<a') ? (
+              <span dangerouslySetInnerHTML={{ __html: content }} />
+            ) : (
+              content
+            )}
           </ElementType>
         )}
       </Draggable>

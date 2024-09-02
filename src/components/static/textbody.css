@@ -3,7 +3,7 @@
 }
 .hey-there{
     font-size: 34px;
-    font-weight: bolder;
+    font-weight: 500;
 }
 .introduction-text{
     font-size: 22px;
@@ -22,6 +22,29 @@
   }
 .clicked:hover,
 .clicked:active {
-    border: 2px solid #00f;
+    border: 2.25px solid #00f;
+    transition: 50ms;
   }
-  
+.draggable-link-1{
+    color: rgb(212, 212, 219);
+}
+.draggable-link-2{
+    color: rgb(47, 246, 117);
+}
+.draggable-link-3{
+    color: rgb(218, 218, 57);
+}
+a {
+    color: rgb(222, 93, 28);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(40, 205, 81);
+    transition: 300ms;
+}
+.lower-body-text{
+    font-size: 20px;
+}
+.portfolio-redirect{
+    
+}

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import '../components/static/textbody.css'
 import DraggableElement from './Draggable'
 import { MainPageContext } from './MainPage';
+import { Link } from 'react-router-dom';
 
 const LowerBodyText = () => {
 
@@ -19,20 +20,13 @@ const LowerBodyText = () => {
         elementType="p"
         content="This site is part portfolio part hand-crafted whiteboard, full work in progress"
         enableDraggable={enableDraggable}
-        className=""
+        className="lower-body-text col-10"
         key={13}
         position={positions[13]}
         onPositionChange={(newPosition) => handlePositionChange(13, newPosition)}
       />
-      <DraggableElement
-        elementType="p"
-        content="If you want to hear about my work in depth, hit the links below and get in touch."
-        enableDraggable={enableDraggable}
-        className=""
-        key={14}
-        position={positions[14]}
-        onPositionChange={(newPosition) => handlePositionChange(14, newPosition)}
-      />
+      <p>To explore my work in detail, click on the <Link to='/portfolio' className='portfolio-redirect'>full portfolio link</Link> and feel free to connect using the links below</p>
+
     </div>
   )
 }
