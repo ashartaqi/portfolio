@@ -6,6 +6,7 @@ import CarServices from './static/images/portfolio/Car Services.png'
 import Plantation from './static/images/portfolio/Plantation.png'
 import SigmaOutside from './static/images/portfolio/Sigma Outside.png'
 import MobileDesign from './static/images/portfolio/Mobile Design.png'
+import Dashboard from './static/images/portfolio/Dashboard.png'
 
 
 const Portfolio = () => {
@@ -98,6 +99,20 @@ const Portfolio = () => {
                                 <div className="content">
                                     <h3>Static Ad Designs</h3>
                                     <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1_vi3aBrP5ZA5aqfdBhWW1pxROV6OKrxC?usp=drive_link">
+                                        <span className="fa fa-eye"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-4 col-md-6 grid-item design">
+                        <div className="single-portfolio-item">
+                            <img src={Dashboard} alt="" className="img-fluid" />
+                            <div className="overlay text-center">
+                                <div className="content">
+                                    <h3></h3>
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.figma.com/design/JGQC8kXkNohaJKlpQzpZI5/UFS-Design?node-id=0-1&t=6aGalsMTvVZCg4Rv-1">
                                         <span className="fa fa-eye"></span>
                                     </a>
                                 </div>
